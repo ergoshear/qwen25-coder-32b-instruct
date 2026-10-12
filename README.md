@@ -1,8 +1,10 @@
-# Qwen2.5-Coder-32B-Instruct Q4_K_M on mlops-node-6
+# Primary Architect Node (mlops-node-6.lan): Qwen2.5-Coder-32B-Instruct
 
-This repository builds a CUDA `llama.cpp` server image for the headless
-`mlops-node-6.lan`: Ryzen 9 9950X3D2, GeForce RTX 4090 (24 GiB VRAM), 64 GiB
-DDR5-6000, and an approximately 2 TB NVMe drive.
+This node drives code-generation agents and real-time editing workloads. Its
+target GPU is an NVIDIA RTX 4090 with 24 GB GDDR6X. This repository currently
+builds a CUDA `llama.cpp` server using a Q4_K_M GGUF model. The supplied cluster
+specification describes an AWQ 4-bit vLLM deployment; that is a different
+runtime and quantized model from the image documented here.
 
 ## Model and context
 
